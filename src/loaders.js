@@ -10,7 +10,7 @@ export const IndexLoader=async()=>{
 }
 
 export const ExpensesLoader=async()=>{
-    const response=await fetch(URL+"/expenses/")
+    const response=await fetch(URL+"/expenses")
     const expenses=await response.json()
     return expenses
 }
@@ -21,7 +21,7 @@ export const ExpenseLoader=async({params})=>{
 }
 
 export const GoalsLoader=async()=>{
-    const response=await fetch(URL+"/goals/")
+    const response=await fetch(URL+"/goals")
     const goals=await response.json()
     return goals
 }

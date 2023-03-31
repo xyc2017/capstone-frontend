@@ -2,10 +2,10 @@ import Expenses from "../components/Expenses"
 import { useLoaderData } from "react-router-dom"
 
 const ExpensesPage=(props)=>{
-    const expenses=useLoaderData()
+    const {expenses}=useLoaderData()
     return (
             <div>
-                {expenses.map((expense)=><Expenses key={expense.id} expense={expense} />)}
+                {expenses?.map((expense)=><Expenses key={expense.id} expense={expense} />)}
             </div>
          )
 }

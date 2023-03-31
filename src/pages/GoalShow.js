@@ -10,9 +10,9 @@ const GoalShow=()=>{
             <div>
                 <h2>Update Goal</h2>
                 <Form action={`/update/${goal.id}`} method="post">
-                    <input type="text" name="Goal" placeholder="Goal" defaultValue={goal.goal} />
-                    <input type="date" name="Due Date" defaultValue={goal.dueDate} />
-                    <input type="checkbox" name="Completed?" defaultValue={goal.completed} />
+                    <input type="text" name="goal" placeholder="Goal" defaultValue={goal.goal} />
+                    <input type="date" name="dueDate" defaultValue={goal.dueDate} />
+                    <input type="checkbox" name="completed" defaultValue={goal.completed} />
                     <button>Update Goal</button>
                 </Form>
                 <Form action={`/delete/${goal.id}`} method="post">

@@ -11,7 +11,9 @@ import GoalShow from "./pages/GoalShow"
 import {createExpense, updateExpense, deleteExpense, createGoal, updateGoal, deleteGoal} from "./actions"
 
 const router=createBrowserRouter(createRoutesFromElements(
+    
     <Route path="/" element={<App/>}>
+
         <Route path="" element={<Index/>} loader={IndexLoader} />
         <Route path="expenses" element={<ExpensesPage/>} loader={ExpensesLoader}/>
         <Route path="expenses/:id" element={<ExpenseShow/>} loader={ExpenseLoader} />
@@ -25,7 +27,9 @@ const router=createBrowserRouter(createRoutesFromElements(
         <Route path="create" action={createGoal} />
         <Route path="update/:id" action={updateGoal} />
         <Route path="delete/:id" action={deleteGoal} />
+
     </Route>
+   
     ))
 
 export default router

@@ -8,12 +8,13 @@ const URL="http://127.0.0.1:5000"
 // expense actions
 export const createExpense = async ({ request }) => {
     const formData = await request.formData(); // get form data
+    console.log(formData)
     const newExpense = {
-      dateOccurred: formData.get("dateOcurred"), // fixed typo in property name
+      dateOcurred: formData.get("dateOcurred"), 
       itemName: formData.get("itemName"),
       price: formData.get("price"),
     };
-    await fetch(URL + "/expenses/", {
+    await fetch(URL + "/expenses/new", {
       method: "POST", // use uppercase for HTTP methods
       headers: {
         "Content-Type": "application/json",
@@ -26,11 +27,12 @@ export const createExpense = async ({ request }) => {
   export const updateExpense = async ({ request, params }) => {
     const formData = await request.formData();
     const updatedExpense = {
-      dateOccurred: formData.get("dateOcurred"), // fixed typo in property name
+      dateOcurred: formData.get("dateOcurred"), 
       itemName: formData.get("itemName"),
       price: formData.get("price"),
     };
-    await fetch(URL + "/expenses/" + params.id + "/", {
+    console.log(updatedExpense)
+    await fetch(`${URL}/expenses/${params.id}/edit`, {
       method: "PUT", // use uppercase for HTTP methods
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +58,7 @@ export const createGoal = async ({ request }) => {
       dueDate: formData.get("dueDate"),
       completed: formData.get("completed") === "true", // convert to boolean
     };
-    await fetch(URL + "/goals/", {
+    await fetch(URL + "/goals/new", {
       method: "POST", // use uppercase for HTTP methods
       headers: {
         "Content-Type": "application/json",
