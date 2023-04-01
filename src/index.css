@@ -1,13 +1,77 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d40;
+  color: #fff;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.expenses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.expense h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.expense p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2196f3;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.goal h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.goal p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.chat {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
 }

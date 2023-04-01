@@ -9,14 +9,14 @@ const Index=(props)=>{
     //const goals=useLoaderData()
     //console.log(goals, "here are the goals")
     return <>
-        <div>Hello
+        <div className="expenses">
             {expenses.expenses[0].itemName}
             {expenses.expenses.map((expense)=><Expenses key={expense.id} expense={expense}/>)}
         </div>
-        <div>
+        <div className="goals">
             {expenses.goals.map((goal)=><Goals key={goal.id} goal={goal}/>)}
         </div>
-        <div>
+        <div className="chat">
             <Chat/>
         </div>
     </>

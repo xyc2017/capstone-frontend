@@ -14,7 +14,7 @@ export const createExpense = async ({ request }) => {
       itemName: formData.get("itemName"),
       price: formData.get("price"),
     };
-    await fetch(URL + "/expenses/new", {
+    await fetch(URL + "/expenses", {
       method: "POST", // use uppercase for HTTP methods
       headers: {
         "Content-Type": "application/json",
