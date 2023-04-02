@@ -1,0 +1,11 @@
+.index{
+    text-align: center;
+    border: 10px;
+    color: brown;
+    margin-left: auto;
+}
+
+.expense{
+    color: blueviolet;
+    padding: 5px;
+}

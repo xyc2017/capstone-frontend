@@ -1,42 +1,28 @@
-import React, { useState } from "react";
-import axios from "axios";
+// import React, { useState } from "react";
 
-function Chat() {
-  const [input, setInput] = useState("");
-  const [output, setOutput] = useState("");
+// const Chat = () => {
+//   const [message, setMessage] = useState("");
+//   const [response, setResponse] = useState("");
 
-  const handleInputChange = (event) => {
-    setInput(event.target.value);
-  };
+//   const handleSendMessage = async () => {
+//     const requestOptions = {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ message }),
+//     };
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+//     const res = await fetch("/", requestOptions);
+//     const data = await res.json();
+//     setResponse(data);
+//   };
 
-    const response = await axios.post("https://api.openai.com/v1/engines/davinci-codex/completions", {
-      prompt: input,
-      max_tokens: 50,
-      n: 1,
-      stop: ["\n"],
-      temperature: 0.5,
-    }, {
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-    });
+//   return (
+//     <div>
+//       <input value={message} onChange={(e) => setMessage(e.target.value)} />
+//       <button onClick={handleSendMessage}>Send</button>
+//       {response && <div>{response}</div>}
+//     </div>
+//   );
+// };
 
-    setOutput(response.data.choices[0].text);
-  };
-
-  return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
-        <input type="text" value={input} onChange={handleInputChange} />
-        <button type="submit">Send</button>
-      </form>
-      <p>{output}</p>
-    </div>
-  );
-}
-
-export default Chat;
+// export default Chat;

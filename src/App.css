@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+
+@media (max-width: 767px) {
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +43,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.index{
+  text-align: center;
+  border: 10px;
+  color: brown;
+  margin-left: auto;
+}
+
+.expense{
+  color: blueviolet;
+  padding: 5px;
 }

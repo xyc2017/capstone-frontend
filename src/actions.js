@@ -1,9 +1,7 @@
 import {redirect} from "react-router-dom"
 
 // deployed API base URL
-const URL="http://127.0.0.1:5000"
-
-//"https://alfie-backend.onrender.com/"
+const URL="https://alfie-backend.onrender.com/"
 
 // expense actions
 export const createExpense = async ({ request }) => {
@@ -14,7 +12,7 @@ export const createExpense = async ({ request }) => {
       itemName: formData.get("itemName"),
       price: formData.get("price"),
     };
-    await fetch(URL + "/expenses", {
+    await fetch(URL + "expenses/new", {
       method: "POST", // use uppercase for HTTP methods
       headers: {
         "Content-Type": "application/json",

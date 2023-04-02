@@ -1,12 +1,14 @@
 import React from "react"
 import {Outlet} from "react-router-dom"
-
+import Headers from "./components/Headers.js"
 
 function App() {
   return (
     <div className="App">
-      <h1>Alfie</h1>
+
+      <Headers />
       <Outlet />
+      
     </div>
   );
 }

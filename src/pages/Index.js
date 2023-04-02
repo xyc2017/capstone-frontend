@@ -8,18 +8,19 @@ const Index=(props)=>{
     console.log(expenses, "here are the expenses")
     //const goals=useLoaderData()
     //console.log(goals, "here are the goals")
-    return <>
-        <div className="expenses">
-            {expenses.expenses[0].itemName}
-            {expenses.expenses.map((expense)=><Expenses key={expense.id} expense={expense}/>)}
-        </div>
-        <div className="goals">
-            {expenses.goals.map((goal)=><Goals key={goal.id} goal={goal}/>)}
-        </div>
-        <div className="chat">
-            <Chat/>
-        </div>
-    </>
+    return (
+        <div className="index">
+        <div className="flex-container">
+        {expenses.expenses.map((expense)=>
+            <div className="expenses-container expenses-red" key={expense.id}>
+                <h2>{expense.itemName}</h2>
+                <p>${expense.price}</p>
+                <p className="date">{expense.dateOcurred}</p>
+            </div>
+        )}
+    </div>
+           
+    </div>
+    )
 }
-
 export default Index

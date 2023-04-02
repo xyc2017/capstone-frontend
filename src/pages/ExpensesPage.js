@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom"
 const ExpensesPage=(props)=>{
     const {expenses}=useLoaderData()
     return (
-            <div>
+            <div className="container">
                 {expenses?.map((expense)=><Expenses key={expense.id} expense={expense} />)}
             </div>
          )

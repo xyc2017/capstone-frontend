@@ -1,6 +1,4 @@
-const URL="http://127.0.0.1:5000"
-
-//"https://alfie-backend.onrender.com/"
+const URL="https://alfie-backend.onrender.com/"
 
 export const IndexLoader=async()=>{
     const response=await fetch(URL)
